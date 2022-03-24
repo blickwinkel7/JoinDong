@@ -1,8 +1,18 @@
 {
-  "name": "joindong",
+  "name": "JoinDong",
   "version": "1.0.0",
   "description": "Platform untuk patungan akun berbayar",
-  "main": "index.js",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "init": "^0.1.2",
+    "pg": "^8.7.3",
+    "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,11 +26,5 @@
   "bugs": {
     "url": "https://github.com/blickwinkel7/JoinDong/issues"
   },
-  "homepage": "https://github.com/blickwinkel7/JoinDong#readme",
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.3",
-    "pg": "^8.7.3",
-    "sequelize": "^6.17.0"
-  }
+  "homepage": "https://github.com/blickwinkel7/JoinDong#readme"
 }
