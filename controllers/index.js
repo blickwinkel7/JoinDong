@@ -9,13 +9,7 @@ const sendemail = require("../helper/nodemailer")
 class Controller {
 
     static getAddForm(req, res) {
-        User.findAll()
-            .then(() => {
-                res.render("registrasi")
-            })
-            .catch((err) => {
-                res.send(err)
-            })
+                res.render("registrasi")     
     };
     static postAddRegister(req, res) {
         const {username, email, password} = req.body
@@ -39,7 +33,9 @@ class Controller {
             .then(() => {
                 res.render("login")
             })
-            .catch((err) => { res.send(err) })
+            .catch((err) => {
+                res.send(err)
+            })
     };
     static postUserLogin(req, res) {
         const { email, password } = req.body
