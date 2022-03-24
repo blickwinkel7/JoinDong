@@ -5,22 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-        <table border="1">
-            <tr>
-              <th>Nama Platform</th>
-              <th>Harga langganan bulanan</th>
-              <th>ACTION</th>
-            </tr>
-            <% data.forEach(el => {%>
-            <tr>
-              <td><%= el.name%></td>
-              <td><%= el.price%></td>
-              <td><a href="/platform/<%= el.id %>"> MAU JOIN!</a></td>
-            </tr>
-            <%})%>
-          </table>
-         <a href="/admin/add">ADD</a>
+        
+         <% data.forEach(el => {%>
+         <div class="row ">
+          <div class="col s12 m2 center-align">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title"><%=el.name%></span>
+                <p style="color:red"><b><%= el.price%></b></p>
+              </div>
+              <div class="card-action">
+                <a href="/admin/add" class="waves-effect waves-light btn">Add</a>
+                <a href="/platform/:id" class="waves-effect waves-light btn">Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%})%>
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+        </script>
 </body>
 </html>
