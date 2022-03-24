@@ -1,20 +1,20 @@
-const { send } = require("express/lib/response");
+ "use strict"
 const nodemailer = require("nodemailer")
 
-function sendEmail(sendTo){
+function sendEmail(sendTo, name){
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'titancelica@gmail.com',
+            user: 'joindonghacktiv8@gmail.com',
             pass: 'Pohodeu1'
         }
     });
     
     var mailOptions = {
-        from: 'titancelica@gmail.com',
-        to: 'titamulyana10@gmail.com',
+        from: 'joindonghacktiv8@gmail.com',
+        to: `${sendTo}`,
         subject: 'Registrasi JoinDong',
-        text: `halo ${sendTo}, email kamu sekarang sudah terdaftar di JoinDong.`
+        text: `halo ${name}, email kamu sekarang sudah terdaftar di JoinDong.`
     };
     
     transporter.sendMail(mailOptions, (err, info) => {
