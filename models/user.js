@@ -12,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       User.hasOne(models.Profile)
-      User.hasMany(models.Subscribe)
+      User.belongsToMany(models.Platform, {
+        through:models.Subscribe
+      })
     }
   }
   User.init({
