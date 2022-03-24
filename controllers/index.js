@@ -18,14 +18,15 @@ class Controller {
             })
     };
     static postAddRegister(req, res) {
-        const { email, password} = req.body
+        const {username, email, password} = req.body
         const newUser = {
+            username,
             email,
             password
         }
-        sendemail(email)
         User.create(newUser)
             .then(() => {
+                sendemail(email, username)
                 res.redirect("/user/login")
             })
             .catch((err) => {
@@ -141,12 +142,21 @@ class Controller {
 
 
 
-    static getAddSubscribe (req, res){
-        const {userId} = req.params
-    Subscribe.findAll({
-        include: [['Platform', 'User']]
-    })
-    }
+    // static detailSubscribe (req, res){
+    //     const {id} = req.params
+    //     Platform.findOne(id, {
+    //     include : [User],
+    //     where: {
+    //         id:id
+    //     }
+    // })
+    // .then((data1) => {
+    //     console.log(data1)
+    //     // res.render("subscribes", {data1})
+    // })
+  
+    // .catch(err => {res.send(err)})
+    // }
 };
 
 module.exports = Controller

@@ -11,11 +11,13 @@
             <tr>
               <th>Nama Platform</th>
               <th>Harga langganan bulanan</th>
+              <th>ACTION</th>
             </tr>
             <% data.forEach(el => {%>
             <tr>
               <td><%= el.name%></td>
               <td><%= el.price%></td>
+              <td><a href="/platform/<%= el.id %>"> MAU JOIN!</a></td>
             </tr>
             <%})%>
           </table>
