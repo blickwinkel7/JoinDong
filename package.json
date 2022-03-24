@@ -1,5 +1,5 @@
 {
-  "name": "JoinDong",
+  "name": "joindong",
   "version": "1.0.0",
   "description": "Platform untuk patungan akun berbayar",
   "main": "index.js",
@@ -20,6 +20,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "pg": "^8.7.3",
     "sequelize": "^6.17.0"
   }
 }
