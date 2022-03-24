@@ -1,0 +1,11 @@
+JoinDong!
+merupakan media untuk patungan akun berbayar.
+
+user dapat menambahkan platform join berbayar (jumlah platform bertambah)
+
+ada 3 kategori: netflix, spotify, youtube
+
+user dapat join pada platform berbayar yang sudah ada dibuat sebelumnya selama masih avaiable
+
+kolom search berdasarkan nama platform
+
