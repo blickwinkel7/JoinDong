@@ -1,0 +1,24 @@
+[
+    {
+        "name"  : "Youtube",
+        "price" : 120000
+    },
+    
+    {
+        "name"  : "Spotify",
+        "price" : 40000
+    },
+    {
+        "name"  : "Netflix",
+        "price" : 80000
+    },
+    {
+        "name"  : "Bilibili",
+        "price" : 48000
+    },
+    {
+        "name"  : "Disney+ Hostar",
+        "price" : 200000
+    }
+
+]
