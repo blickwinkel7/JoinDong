@@ -113,7 +113,7 @@ class Controller {
     static getAddPlatform (req, res) {
         Platform.findAll()
         .then((data) => {
-            res.render("add-form", {data})
+            res.render("admin-add", {data})
         })
         .catch(err => {
             res.send(err)
