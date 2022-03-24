@@ -1,7 +1,10 @@
 "use strict"
 
+const nodemailer = require("nodemailer")
+
 const { Profile, Platform, Subscribe, User } = require("../models")
 const bcrypt = require("bcryptjs")
+const sendemail = require("../helper/nodemailer")
 
 class Controller {
 
@@ -20,6 +23,7 @@ class Controller {
             email,
             password
         }
+        sendemail(email)
         User.create(newUser)
             .then(() => {
                 res.redirect("/user/login")
