@@ -13,7 +13,7 @@ router.use("/profile", profileRoute)
 router.use("/platform", platformRoute)
 
 router.get("/", (req, res) => {
-    res.render("first-page")
+    res.render("home")
 })
 
 
