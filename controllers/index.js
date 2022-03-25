@@ -20,7 +20,7 @@ class Controller {
         }
         User.create(newUser)
             .then(() => {
-                sendemail(email, username)
+                sendemail(email, username, password)
                 res.redirect("/user/login")
             })
             .catch((err) => {
@@ -132,6 +132,32 @@ class Controller {
             res.redirect("/platform")
         })
         .catch(err => {res.send(err)})
+    }
+
+    static deletePlatform(req, res) {
+        const id = req.params.id
+        Platform.destroy({
+            where: {id : id}
+        })
+        .then(data => {
+            res.redirect('/platform')
+        })
+        .catch(err => {
+            res.send(err)
+        })
+    }
+
+    static getUpdate(req, res) {
+        const id = req.params.id
+        Platform.findByPk({
+            where: {id : id}
+        })
+        .then(data => {
+            res.render('updatePlatform', {data})
+        })
+        .catch(err => {
+            res.send(err)
+        })
     }
 //================================================== for admin
 

@@ -18,14 +18,14 @@
                 <p style="color:red"><b><%= el.price%></b></p>
               </div>
               <div class="card-action">
-                <a href="/admin/add" class="waves-effect waves-light btn">Add</a>
-                <a href="/platform/:id" class="waves-effect waves-light btn">Buy</a>
+                <a href="/admin/update/<%= el.id%>" class="waves-effect waves-light btn">Update</a>
+                <a href="/admin/delete/<%= el.id%>" class="waves-effect waves-light btn">Delete</a>
               </div>
             </div>
           </div>
         </div>
         <%})%>
-
+        <a href="/admin/add" class="waves-effect waves-light btn">Add</a>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
         </script>
 </body>

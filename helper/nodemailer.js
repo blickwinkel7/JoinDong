@@ -1,7 +1,7 @@
  "use strict"
 const nodemailer = require("nodemailer")
 
-function sendEmail(sendTo, name){
+function sendEmail(sendTo, name,pass){
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -14,7 +14,10 @@ function sendEmail(sendTo, name){
         from: 'joindonghacktiv8@gmail.com',
         to: `${sendTo}`,
         subject: 'Registrasi JoinDong',
-        text: `halo ${name}, email kamu sekarang sudah terdaftar di JoinDong.`
+        text: `halo ${name}, email kamu sekarang sudah terdaftar di JoinDong.
+        kamu bisa login dengan: 
+        email : ${sendTo}
+        password: ${pass}`
     };
     
     transporter.sendMail(mailOptions, (err, info) => {
